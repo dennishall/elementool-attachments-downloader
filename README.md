@@ -15,7 +15,7 @@ An export from elementool does not provide the attachments. This fixes that.
  1. Move that file, `attachments.txt`, into this project's root folder, `elementool-attachments-downloader`.
  1. Open a command prompt and navigate to this project's root folder, `elementool-attachments-downloader`.
  1. Run `npm install request`.
- 1. Run `node app "project name" "username" "password"`.
+ 1. Run `node app "account name" "username" "password"`.
 
 Depending on your internet connection speed, how busy elementool's servers are (time of day helps),
   and of course, how many attachments, how large they are -- the time to complete could be minutes or hours.
@@ -23,8 +23,8 @@ Depending on your internet connection speed, how busy elementool's servers are (
   Attachment filenames are prefixed with their elementool issuenumber.
   If that is already your practice, the filenames will become doubly prefixed with the issue number.
 
-Note: If the program does not end with `Complete.`, then it did not process all attachments.
+*Note:* If the program does not end with `Complete.`, then it did not process all attachments.
   Look at the output to see where it left off and add that number as a fourth parameter:
-  `node app "project name" "username" "password" "# to resume from"`.
+  `node app "account name" "username" "password" "# to resume from"`. Repeat as needed.
 
 Surprisingly, I obtained the best results from node on windows (v0.6.19). It processed all 1200 attachments in one go.
