@@ -15,9 +15,6 @@ if(process.argv.length < 5){
 // duplicate issue numbers is ok and expected.
 var attachmentslist = 'attachments.txt';
 var downloadDirectory = './attachments/';
-// if there was a problem, update this value to resume from where you left off.
-// set to -1 to start from the beginning
-
 
 var issueNumbers = fs.readFileSync(attachmentslist).toString().replace(/Issue ID\r?\n/, '').split(/\r?\n/g);
 while(issueNumbers[issueNumbers.length-1]=='') issueNumbers.length--;
